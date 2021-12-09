@@ -7,15 +7,21 @@ from flask import Flask, render_template
 
 app = Flask(__name__)
 
-# model = joblib.load("C://Users/alexa/Desktop/dataengineering2_project/models/lr_model.pkl")
-model = joblib.load("../models/lr_model.pkl")
-vectorizer = joblib.load("../models/vectorizer.pkl")
+@app.route('/')
+def my_form():
+    return render_template('index.html')
 
-def sentiment_analysis(sentence):
-    input = vectorizer.transform([sentence])
-    result = model.predict(input)[0]
+@app.route('/', methods=['POST'])
+    # model = joblib.load("C://Users/alexa/Desktop/dataengineering2_project/models/lr_model.pkl")
+    model = joblib.load("../models/lr_model.pkl")
+    vectorizer = joblib.load("../models/vectorizer.pkl")
 
-    print(result)
+    def sentiment_analysis(sentence):
+        input = vectorizer.transform([sentence])
+        result = model.predict(input)[0]
+
+        return result
+    return(render_template('index.html', variable=result))
 
 
-resultat = sentiment_analysis("I am not happy")
+
