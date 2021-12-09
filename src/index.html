@@ -1,25 +1,13 @@
-// index.html
 <!DOCTYPE html>
 <html>
   <head>
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
-      crossorigin="anonymous"
-    />
-    <script
-      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-      crossorigin="anonymous"
-    ></script>
     <style>
       .centered {
         position: relative;
         text-align: center;
         display: grid;
         place-items: center;
-        color: white;
+        color: #cececea6;
       }
 
       .header {
@@ -37,7 +25,7 @@
 
       h1 {
         color: #111;
-        font-family: 'Helvetica Neue', sans-serif;
+        font-family: 'Math Serif Bold';
         font-size: 36px;
         font-weight: bold;
         letter-spacing: -1px;
@@ -59,6 +47,11 @@
         justify-content: space-around;
         align-items: center;
       }
+
+      body {
+      background-color: rgb(179, 175, 175);
+      }
+
     </style>
   </head>
   <body>
@@ -67,20 +60,22 @@
         <div class="text-center text-white">
           <title>sentiment analysis app</title>
         </div>
-        <h1 class="header">Sentiment Analysis App</h1>
+        <img src="https://d1sjtleuqoc1be.cloudfront.net/wp-content/uploads/2019/04/25112909/shutterstock_1073953772.jpg", alt="Image" height="200" width="300"/>
+        <h1 class="header">Welcome to the Sentiment Analysis App</h1>
 
         <p class="desc">
-          Type a sentence, click on the submit button and wait for your prediction.
+          Type a sentence and watch its prediction
         </p>
 
         <form method="POST" onSubmit="return validate();" class="form">
           <div class="form-div">
-            <input type="text" name="text" class="form-control mr-2" />
+          <textarea name="review" placeholder="Your text" ></textarea>
             <button type="submit" class="btn btn-outline-primary" onclick="this.form.submit();">
               Submit
             </button>
           </div>
         </form>
+
         <br />
         <br />
 
