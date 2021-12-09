@@ -1,15 +1,33 @@
 from flask import Flask
 import joblib
+from flask import request
+from flask import Flask, render_template
 
-# model = joblib.load("C://Users/alexa/Desktop/dataengineering2_project/models/lr_model.pkl")
+app = Flask(__name__)
+
+
 model = joblib.load("../models/lr_model.pkl")
 vectorizer = joblib.load("../models/vectorizer.pkl")
 
-def sentiment_analysis(sentence):
-    input = vectorizer.transform([sentence])
-    result = model.predict(input)[0]
+def applySA(inputedVal):
+    input = vectorizer.transform([inputedVal])
+    results = model.predict(input)[0]
+    return results
 
-    print(result)
+
+@app.route('/')
+def my_form():
+    return render_template('homepage.html')
+
+@app.route('/', methods=['POST', 'GET'])
+def sentiment_analysis():
+
+    if request.method == 'POST':
+        print(request.form['review'])
+        inputSentiment = request.form['review']
+        sentiment = applySA(inputSentiment)
+        return render_template('sentimentAnalysis.html', finalResults = sentiment)
 
 
-resultat = sentiment_analysis("I am not happy")
+if __name__ == '__main__':
+    app.run(port=5000, debug=True)
