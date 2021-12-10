@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
+
     <style>
       .centered {
         position: relative;
@@ -53,12 +54,17 @@
       }
 
     </style>
+
   </head>
+
+
+
+
   <body>
     <div class="container mt-5">
       <div class="centered">
         <div class="text-center text-white">
-          <title>sentiment analysis app</title>
+          <title>Sentiment analysis app</title>
         </div>
         <img src="https://d1sjtleuqoc1be.cloudfront.net/wp-content/uploads/2019/04/25112909/shutterstock_1073953772.jpg", alt="Image" height="200" width="300"/>
         <h1 class="header">Welcome to the Sentiment Analysis App</h1>
@@ -68,12 +74,17 @@
         </p>
 
         <form method="POST" onSubmit="return validate();" class="form">
+
           <div class="form-div">
+
           <textarea name="review" placeholder="Your text" ></textarea>
-            <button type="submit" class="btn btn-outline-primary" onclick="this.form.submit();">
+
+            <button type="submit" class="btn btn-outline-primary">
               Submit
             </button>
+
           </div>
+
         </form>
 
         <br />
@@ -83,4 +94,6 @@
       </div>
     </div>
   </body>
+
+
 </html>
