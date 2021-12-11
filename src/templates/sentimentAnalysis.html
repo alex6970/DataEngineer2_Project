@@ -1,4 +1,53 @@
+<!DOCTYPE html>
 <html>
+  <head>
+    <style>
+      .centered {
+        position: relative;
+        text-align: center;
+        display: grid;
+        place-items: center;
+        color: #cececea6;
+      }
+
+      .header {
+        color: black;
+      }
+
+      h1 {
+        color: #111;
+        font-family: 'Math Serif Bold';
+        font-size: 36px;
+        font-weight: bold;
+        letter-spacing: -1px;
+        line-height: 1;
+        text-align: center;
+      }
+
+      #demo {
+        color: #111;
+        font-family: 'Helvetica Neue', sans-serif;
+        font-size: 22px;
+        line-height: 24px;
+        margin: 0 0 24px;
+        text-justify: inter-word;
+      }
+
+      .form-div {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+      }
+
+      body {
+      background-color: rgb(179, 175, 175);
+      margin: 0 auto; 
+      text-align: center; 
+      }
+
+    </style>
+
+
 
 <head>
   <title>Sentiment Analysis results</title>
@@ -6,8 +55,8 @@
 </head>
 
 <body>
-  <h3>Results</h3>
-  <h3>Predictions :</h3>
+  <h1>Results</h1>
+  <h1>Predictions :</h1>
 
   <div>General sentiment is : <strong>{{ finalResults }}</strong>.
   </div>
