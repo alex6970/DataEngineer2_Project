@@ -9,8 +9,8 @@ app = Flask(__name__)
 # model = joblib.load("../models/lr_model.pkl")
 # vectorizer = joblib.load("../models/vectorizer.pkl")
 
-model = joblib.load("/models/lr_model.pkl")
-vectorizer = joblib.load("/models/vectorizer.pkl")
+model = joblib.load("models/lr_model.pkl")
+vectorizer = joblib.load("models/vectorizer.pkl")
 
 def applySA(inputedVal):
     input = vectorizer.transform([inputedVal])
@@ -33,4 +33,4 @@ def sentiment_analysis():
 
 
 if __name__ == '__main__':
-    app.run(port=5000, debug=True)
+    app.run(port=5000, debug=True, host="0.0.0.0")
