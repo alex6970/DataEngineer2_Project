@@ -29,8 +29,6 @@ Project Organization
     │   ├── app.py         <- Main scrip, containing the Sentiment Analysis app
     │   │
     │   ├── templates      <- Html/css files for the web app design
-    │   │
-    │   └── visualization  <- Scripts to create exploratory and results oriented visualizations
     │
     └──
 
