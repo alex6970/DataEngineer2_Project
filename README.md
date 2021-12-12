@@ -14,7 +14,7 @@ Project Organization
     │
     ├── data               <- Data from Kaggle (tripAdvisor reviews .csv)
     │
-    ├── model              <- Trained Logistic Regression model and vectorizer (cf. notebook)
+    ├── models             <- Trained Logistic Regression model and vectorizer (cf. notebook)
     │
     ├── notebook           <- Jupyter notebook (Sentiment analysis model training)
     │
@@ -22,17 +22,28 @@ Project Organization
     │
     ├── requirements.txt   <- The requirements file for reproducing the analysis environment, e.g.
     │                         generated with `pip freeze > requirements.txt`
+    │
+    ├── Dockerfile
+    │                         
+    ├── docker-compose.yaml
     │     
-    ├── src                <- Source code for use in this project.
-    │   ├── __init__.py    <- Makes src a Python module
+    ├── src                  <- Source code for use in this project.
+    │   ├── __init__.py      <- Makes src a Python module
     │   │
-    │   ├── app.py         <- Main scrip, containing the Sentiment Analysis app
+    │   ├── app.py           <- Main scrip, containing the Sentiment Analysis app
     │   │
-    │   ├── templates      <- Html/css files for the web app design
+    │   ├── templates        <- Html/css files for the web app design
+    │
+    ├── tests                <- Folder containing functional and unit tests.
+    │   ├── __init__.py      <- Makes tests a Python module
+    │   │
+    │   ├── test_inte.py     <- Functional test
+    │   │
+    │   ├── test_unit.py     <- Unit tests
+    │   │
+    │   ├── TestingNotes.docx     <- Word document containing a screenshot of the testing results
     │
     └──
 
 
 --------
-
-<p><small>Project based on the <a target="_blank" href="https://drivendata.github.io/cookiecutter-data-science/">cookiecutter data science project template</a>. #cookiecutterdatascience</small></p>
