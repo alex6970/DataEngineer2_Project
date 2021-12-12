@@ -5,10 +5,11 @@ from flask import Flask, render_template
 
 app = Flask(__name__)
 
-
+# For Flask
 # model = joblib.load("../models/lr_model.pkl")
 # vectorizer = joblib.load("../models/vectorizer.pkl")
 
+#For Docker
 model = joblib.load("models/lr_model.pkl")
 vectorizer = joblib.load("models/vectorizer.pkl")
 
@@ -30,7 +31,6 @@ def sentiment_analysis():
         inputSentiment = request.form['review']
         sentiment = applySA(inputSentiment)
         return render_template('sentimentAnalysis.html', finalResults = sentiment)
-
 
 if __name__ == '__main__':
     app.run(port=5000, debug=True, host="0.0.0.0")
