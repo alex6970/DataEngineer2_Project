@@ -1,12 +1,13 @@
 DataEngineering2 Project
 ==============================
 
-Data Engineering course project involving sentiment analysis in python, Flask and Docker.
+Data Engineering course project involving sentiment analysis in python, with Flask and Docker.
 
 By Alexandra GONCALVES, Sandra KEUTCHA and Elisa NITSCHKE
 
 Project Organization
 ------------
+```
 
 ├── LICENSE
 │        
@@ -43,6 +44,7 @@ Project Organization
 │   ├── TestingNotes.docx     <- Word document containing a screenshot of the testing results
 │
 └──
+```
 
 
 --------
