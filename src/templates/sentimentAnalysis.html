@@ -1,72 +1,129 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <style>
-      .centered {
-        position: relative;
-        text-align: center;
-        display: grid;
-        place-items: center;
-        color: #cececea6;
-      }
-
-      .header {
-        color: black;
-      }
-
-      h1 {
-        color: #111;
-        font-family: 'Math Serif Bold';
-        font-size: 36px;
-        font-weight: bold;
-        letter-spacing: -1px;
-        line-height: 1;
-        text-align: center;
-      }
-
-      #demo {
-        color: #111;
-        font-family: 'Helvetica Neue', sans-serif;
-        font-size: 22px;
-        line-height: 24px;
-        margin: 0 0 24px;
-        text-justify: inter-word;
-      }
-
-      .form-div {
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-      }
-
-      body {
-      background-color: rgb(179, 175, 175);
-      margin: 0 auto; 
-      text-align: center; 
-      }
-
-    </style>
-
-
-
 <head>
-  <title>Sentiment Analysis results</title>
   <link rel=”stylesheet” href=”style2.css”>
-</head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" crossorigin="anonymous"/>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css2?family=Readex+Pro:wght@300&display=swap" rel="stylesheet">
 
-<body>
-  <h1>Results</h1>
-  <h1>Predictions :</h1>
+  <style>
+  .centered {
+    position: relative;
+    text-align: center;
+    display: grid;
+    place-items: center;
+  }
 
-  <div>General sentiment is : <strong>{{ finalResults }}</strong>.
-  </div>
+  .efreiImg {
+    width: 100px;
+    height: auto;
+    margin-left: 20px;
+    margin-top: 20px;
+  }
 
-    <div id=’button’>
-      <form action="/">
-        <input type=submit value='Submit another review'>
-      </form>
+  .saImg{
+    margin-bottom: 0;
+    width: 150px;
+    height: auto;
+  }
+
+  h1 {
+    color: white;
+    margin-top: 0;
+    font-size: 30px;
+  }
+
+  .form-div {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  body {
+    background-color: #74b9ff;
+    font-family: 'Readex Pro', sans-serif;
+
+  }
+  button{
+    margin-left: 10px;
+    margin-bottom: 18px;
+  }
+
+  .form-div {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .res{
+    color: white;
+  }
+
+  .footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 80px;
+    background: #0984e3;
+    color: white;
+    text-align: center;
+  }
+  .footer > p{
+    margin-top: 10px;
+    margin-bottom: 8px;
+    font-size: 13px;
+  }
+
+  a {
+    color: white;
+  }
+
+  a:hover {
+    color: lightgrey;
+  }
+
+  </style>
+
+
+
+  <head>
+    <title>Sentiment Analysis results</title>
+  </head>
+
+  <body>
+    <header>
+      <img class="efreiImg" src="https://www.efrei.fr/wp-content/uploads/2019/06/Logo-Efrei-2017-Fr-Web.png", alt="Image"/>
+    </header>
+
+    <div class="centered">
+
+      <img class="saImg" src="https://static.thenounproject.com/png/3383100-200.png", alt="Image"/>
+      <br>
+
+      <h1>Results</h1>
+      <br>
+      <br>
+
+
+      <div class="res">General sentiment is : <strong>{{ finalResults }}</strong>.</div>
+      <br>
+      <br>
+
+      <div class="form-div">
+
+          <form action="/">
+            <button type="submit" class="btn btn-primary">Submit another review</button>
+          </form>
+
+      </div>
     </div>
 
-  </body>
+  </div>
+  <div class="footer"> <p>© Made by Alexandra Goncalves, Sandra Keutcha and Elisa Nitshcké. </p> <a href="https://github.com/alex6970/DataEngineer2_Project"><i class="fab fa-github fa-2x"></i></a>  </div>
 
-  </html>
+
+</body>
+
+</html>
